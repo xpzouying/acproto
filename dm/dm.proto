@@ -1,0 +1,105 @@
+syntax = "proto3";
+package dm;
+
+// OpType 操作类型约定
+enum OpType {
+	AddFace = 0;
+	DeleteFace = 1;
+}
+
+// AddDevReq is request of add device
+message AddDevReq {
+	string reqid = 1;
+	string dev_url = 2;
+ 	string dev_topic = 3;
+}
+
+// AddDevResp is response of add device
+message AddDevResp {
+	string reqid = 1;
+	string dev_url = 2;
+	bool result = 3;
+	string error = 4;
+}
+
+// DelDevReq 删除设备请求
+message DelDevReq {
+	string reqid = 1;
+	string dev_url = 2;
+}
+
+// DelDevResp 删除设备响应
+message DelDevResp {
+	string reqid = 1;
+	string dev_url = 2;
+	bool result = 3;
+	string error = 4;
+}
+
+// AddGroupReq is request for add group
+message AddGroupReq {
+	string reqid = 1;
+	string group_name = 2;
+	string dev_url = 3;
+	float threshold = 4;
+	int32 top_n = 5;
+}
+
+// AddGroupResp is response for add group
+message AddGroupResp {
+	string reqid = 1;
+	string group_name = 2;
+	string dev_url = 3;
+	bool result = 4;
+	string error = 5;
+}
+
+
+// DelGroupReq is request for add group
+message DelGroupReq {
+	string reqid = 1;
+	string group_name = 2;
+	string dev_url = 3;
+}
+
+// DelGroupResp is response for add group
+message DelGroupResp {
+	string reqid = 1;
+	bool result = 2;
+	string error = 3;
+	string group_name = 4;
+	string dev_url = 5;
+}
+
+// AddFaceReq 添加人脸请求
+message AddFaceReq {
+	string reqid = 1;
+	string group = 2;
+	string face_token = 3;
+	string url = 4;
+}
+
+// AddFaceResp 增加人脸响应
+message AddFaceResp {
+	string reqid = 1;
+	string group = 2;
+	string face_token = 3;
+	bool result = 4;
+	string error = 5;
+}
+
+// DelFaceReq 删除人脸请求
+message DelFaceReq {
+	string reqid = 1;
+	string group = 2;
+	string face_token = 3;
+}
+
+// DelFaceResp 增加人脸响应
+message DelFaceResp {
+	string reqid = 1;
+	string group = 2;
+	string face_token = 3;
+	bool result = 4;
+	string error = 5;
+}
