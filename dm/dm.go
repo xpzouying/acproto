@@ -6,6 +6,9 @@ type OpType int
 const (
 	// RespTopic dm返回给ac的response队列名
 	RespTopic = "dm_response_topic"
+
+	addFaceType = "add_face"
+	delFaceType = "del_face"
 )
 
 const (
@@ -18,8 +21,14 @@ const (
 
 // OpTypeMap 映射OpType对应的字符串
 var OpTypeMap = map[OpType]string{
-	OpTypeAddFace: "add_face",
-	OpTypeDelFace: "del_face",
+	OpTypeAddFace: addFaceType,
+	OpTypeDelFace: delFaceType,
+}
+
+// StrOpTypeMap 字符串到OpType的反向查询
+var StrOpTypeMap = map[string]OpType{
+	addFaceType: OpTypeAddFace,
+	delFaceType: OpTypeDelFace,
 }
 
 // --- Device ---
