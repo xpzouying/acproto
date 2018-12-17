@@ -4,6 +4,11 @@ package dm
 type OpType int
 
 const (
+	// RespTopic dm返回给ac的response队列名
+	RespTopic = "dm_response_topic"
+)
+
+const (
 	_ OpType = iota
 	// OpTypeAddFace operation for add face
 	OpTypeAddFace
@@ -88,31 +93,33 @@ type DelGroupResp struct {
 type AddFaceReq struct {
 	ReqID   string `json:"req_id"`
 	Group   string `json:"group"`
-	Face    string `json:"face_token"`
+	Face    string `json:"face"`
 	FaceURL string `json:"face_url"`
 }
 
 // AddFaceResp 增加人脸响应
 type AddFaceResp struct {
-	ReqID  string `json:"req_id"`
-	Group  string `json:"group"`
-	Face   string `json:"face_token"`
 	Result bool   `json:"result"`
 	Error  string `json:"error"`
+	ReqID  string `json:"req_id"`
+	DevURL string `json:"dev_url"`
+	Group  string `json:"group"`
+	Face   string `json:"face"`
 }
 
 // DelFaceReq 删除人脸请求
 type DelFaceReq struct {
 	ReqID string `json:"req_id"`
 	Group string `json:"group"`
-	Face  string `json:"face_token"`
+	Face  string `json:"face"`
 }
 
 // DelFaceResp 增加人脸响应
 type DelFaceResp struct {
 	ReqID  string `json:"req_id"`
 	Group  string `json:"group"`
-	Face   string `json:"face_token"`
+	Face   string `json:"face"`
+	DevURL string `json:"dev_url"`
 	Result bool   `json:"result"`
 	Error  string `json:"error"`
 }
