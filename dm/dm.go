@@ -7,6 +7,9 @@ const (
 	// RespTopic dm返回给ac的response队列名
 	RespTopic = "dm_response_topic"
 
+	// RecognizeTopic 识别消息的队列名
+	RecognizeTopic = "recognize_pub"
+
 	addFaceType = "add_face"
 	delFaceType = "del_face"
 )
