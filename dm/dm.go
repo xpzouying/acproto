@@ -99,8 +99,6 @@ type AddFaceReq struct {
 
 // AddFaceResp 增加人脸响应
 type AddFaceResp struct {
-	Result bool   `json:"result"`
-	Error  string `json:"error"`
 	ReqID  string `json:"req_id"`
 	DevURL string `json:"dev_url"`
 	Group  string `json:"group"`
@@ -120,8 +118,6 @@ type DelFaceResp struct {
 	Group  string `json:"group"`
 	Face   string `json:"face"`
 	DevURL string `json:"dev_url"`
-	Result bool   `json:"result"`
-	Error  string `json:"error"`
 }
 
 // SyncReq 同步请求
