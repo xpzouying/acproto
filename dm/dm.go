@@ -115,6 +115,8 @@ type AddFaceResp struct {
 	DevURL string `json:"dev_url"`
 	Group  string `json:"group"`
 	Face   string `json:"face"`
+	Result bool   `json:"result"`
+	Error  string `json:"error"`
 }
 
 // DelFaceReq 删除人脸请求
@@ -130,6 +132,8 @@ type DelFaceResp struct {
 	Group  string `json:"group"`
 	Face   string `json:"face"`
 	DevURL string `json:"dev_url"`
+	Result bool   `json:"result"`
+	Error  string `json:"error"`
 }
 
 // SyncReq 同步请求
