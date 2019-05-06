@@ -82,7 +82,7 @@ type AddGroupResp struct {
 	DevURL string `json:"dev_url"`
 	Group  string `json:"group"`
 	Result bool   `json:"result"`
-	Error  string `json:"error"`
+	Error  string `json:"error,omitempty"`
 }
 
 // DelGroupReq is request for add group
@@ -98,7 +98,7 @@ type DelGroupResp struct {
 	DevURL string `json:"dev_url"`
 	Group  string `json:"group"`
 	Result bool   `json:"result"`
-	Error  string `json:"error"`
+	Error  string `json:"error,omitempty"`
 }
 
 // AddFaceReq 添加人脸请求
@@ -116,7 +116,7 @@ type AddFaceResp struct {
 	Group  string `json:"group"`
 	Face   string `json:"face"`
 	Result bool   `json:"result"`
-	Error  string `json:"error"`
+	Error  string `json:"error,omitempty"`
 }
 
 // DelFaceReq 删除人脸请求
@@ -133,7 +133,7 @@ type DelFaceResp struct {
 	Face   string `json:"face"`
 	DevURL string `json:"dev_url"`
 	Result bool   `json:"result"`
-	Error  string `json:"error"`
+	Error  string `json:"error,omitempty"`
 }
 
 // SyncReq 同步请求
