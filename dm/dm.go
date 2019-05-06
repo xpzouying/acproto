@@ -10,8 +10,8 @@ const (
 	// RecognizeTopic 识别消息的队列名
 	RecognizeTopic = "recognize_pub"
 
-	addFaceType = "add_face"
-	delFaceType = "del_face"
+	AddFace = "add_face"
+	DelFace = "del_face"
 )
 
 const (
@@ -24,14 +24,14 @@ const (
 
 // OpTypeMap 映射OpType对应的字符串
 var OpTypeMap = map[OpType]string{
-	OpTypeAddFace: addFaceType,
-	OpTypeDelFace: delFaceType,
+	OpTypeAddFace: AddFace,
+	OpTypeDelFace: DelFace,
 }
 
 // StrOpTypeMap 字符串到OpType的反向查询
 var StrOpTypeMap = map[string]OpType{
-	addFaceType: OpTypeAddFace,
-	delFaceType: OpTypeDelFace,
+	AddFace: OpTypeAddFace,
+	DelFace: OpTypeDelFace,
 }
 
 // --- Device ---
